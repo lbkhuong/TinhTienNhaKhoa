@@ -29,10 +29,15 @@ namespace TinhTienNhaKhoa
 
             Check.NameCheck nameCheck = new Check.NameCheck();
 
-            if (txtName.Text == "")
+            if (!nameCheck.TextBoxBlankCheck(txtName))
             {
                 epvNameCheck.SetError(txtName, "Tên không được bỏ trống!");
                 return false;
+            }
+            else
+            {
+                epvNameCheck.Clear();
+                return true;
             }
 
             return true;
