@@ -46,6 +46,7 @@ namespace TinhTienNhaKhoa
         private void Tinh_Tien(object sender, EventArgs e)
         {
             float tongTien = 0;
+            int i = (int)nudSoRangNho.Value;
             if (ckbTienTramRang.Checked == true)
             {
                 tongTien = tongTien + 200000;
@@ -54,6 +55,7 @@ namespace TinhTienNhaKhoa
             {
                 tongTien = tongTien + 300000;
             }
+            tongTien = tongTien  + i * 100000;
             txtTongTien.Text = tongTien.ToString();
         }
     }

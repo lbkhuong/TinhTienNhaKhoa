@@ -201,6 +201,11 @@ namespace TinhTienNhaKhoa
             this.nudSoRangNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.nudSoRangNho.Location = new System.Drawing.Point(194, 222);
             this.nudSoRangNho.Margin = new System.Windows.Forms.Padding(2);
+            this.nudSoRangNho.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.nudSoRangNho.Name = "nudSoRangNho";
             this.nudSoRangNho.Size = new System.Drawing.Size(50, 24);
             this.nudSoRangNho.TabIndex = 14;
