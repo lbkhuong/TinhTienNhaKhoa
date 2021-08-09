@@ -16,7 +16,7 @@ namespace TinhTienNhaKhoa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TinhTienNhaKhoa());
+            Application.Run(new frmMain());
         }
     }
 }
