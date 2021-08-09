@@ -249,7 +249,9 @@ namespace TinhTienNhaKhoa
             this.Controls.Add(this.lblDVSD);
             this.Controls.Add(this.lblHoTen);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
+            this.ShowIcon = false;
             this.Text = "Tính Tiền Nha Khoa";
             ((System.ComponentModel.ISupportInitialize)(this.nudSoRangNho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvNameCheck)).EndInit();

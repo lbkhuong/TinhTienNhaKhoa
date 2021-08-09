@@ -19,14 +19,18 @@ namespace TinhTienNhaKhoa.Check
             return true;
         }
 
-        public bool NumberCheck(TextBox textBox)
+        public bool NumAndSpecCharCheck(TextBox textBox)
         {
             string str = textBox.Text.ToString();
+
+            char[] arrChar = new char[256];
+            AddAsciiCode(arrChar);
+
             for (int i = 0; i < str.Length; i++)
             {
-                for (char j = '0'; j < '9'; j++)
+                for (int j = 0; j <= 127; j++)
                 {
-                    if (str[i] == j)
+                    if (str[i] == arrChar[j])
                     {
                         return false;
                     }
@@ -36,9 +40,35 @@ namespace TinhTienNhaKhoa.Check
             return true;
         }
 
-        public bool SpecCharCheck(TextBox textBox)
+        private void AddAsciiCode(char[] arrChar)
         {
-            return true;
+            for (int i = 0; i <= 127; i++)
+            {
+                arrChar[i] = (char)i;
+
+                if (i == 10 || i == 32)
+                {
+                    arrChar[i] = (char)64;
+                }
+
+                for (int n = 65; n <= 90; n++)
+                {
+                    if (i == n)
+                    {
+                        arrChar[i] = (char)64;
+                        continue;
+                    }
+                }
+
+                for (int n = 97; n <= 122; n++)
+                {
+                    if (i == n)
+                    {
+                        arrChar[i] = (char)64;
+                        continue;
+                    }
+                }
+            }
         }
     }
 }

@@ -31,14 +31,14 @@ namespace TinhTienNhaKhoa
 
             if (!nameCheck.BlankCheck(txtName))
             {
-                epvNameCheck.SetError(txtName, "Tên không được bỏ trống!");
+                epvNameCheck.SetError(txtName, "Họ tên không được để trống!");
                 btnTinhTien.Enabled = false;
                 return false;
             }
 
-            if (!nameCheck.NumberCheck(txtName))
+            if (!nameCheck.NumAndSpecCharCheck(txtName))
             {
-                epvNameCheck.SetError(txtName, "Tên không được có số!");
+                epvNameCheck.SetError(txtName, "Họ tên không được có số hay ký tự đặc biệt!");
                 btnTinhTien.Enabled = false;
                 return false;
             }
@@ -53,7 +53,6 @@ namespace TinhTienNhaKhoa
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
             float tongTien = 0;
-            int i = (int)nudSoRangNho.Value;
 
             if (ckbTienTramRang.Checked == true)
             {
@@ -67,7 +66,7 @@ namespace TinhTienNhaKhoa
 
             byte soRang = (byte)nudSoRangNho.Value;
 
-            tongTien = tongTien + i * 100000;
+            tongTien = tongTien + soRang * 100000;
 
             if (tongTien == 0)
             {
