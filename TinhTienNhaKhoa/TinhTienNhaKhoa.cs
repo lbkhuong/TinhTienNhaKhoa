@@ -29,6 +29,7 @@ namespace TinhTienNhaKhoa
         private void tinhTien(object sender, EventArgs e)
         {
             Button tinhTien = new Button();
+            Console.WriteLine("Test Tính Năng !!!");
         }
     }
 }
