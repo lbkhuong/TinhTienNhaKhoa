@@ -19,7 +19,7 @@ namespace TinhTienNhaKhoa
 
         private void TinhTienNhaKhoa_Load(object sender, EventArgs e)
         {
-
+            //Phong
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
