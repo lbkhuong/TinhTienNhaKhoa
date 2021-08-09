@@ -42,5 +42,19 @@ namespace TinhTienNhaKhoa
             epvNameCheck.SetError(txtName, "");//t sửa này được ko
             return true;
         }
+
+        private void Tinh_Tien(object sender, EventArgs e)
+        {
+            float tongTien = 0;
+            if (ckbTienTramRang.Checked == true)
+            {
+                tongTien = tongTien + 200000;
+            }
+            if (ckbTienCaoVoi.Checked == true)
+            {
+                tongTien = tongTien + 300000;
+            }
+            txtTongTien.Text = tongTien.ToString();
+        }
     }
 }

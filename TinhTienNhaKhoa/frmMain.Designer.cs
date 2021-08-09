@@ -41,10 +41,11 @@ namespace TinhTienNhaKhoa
             this.lblNhoRang = new System.Windows.Forms.Label();
             this.lblDonGiaNhoRang = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.tongTien = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnTinhTien = new System.Windows.Forms.Button();
             this.nudSoRangNho = new System.Windows.Forms.NumericUpDown();
             this.epvNameCheck = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoRangNho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvNameCheck)).BeginInit();
             this.SuspendLayout();
@@ -173,15 +174,15 @@ namespace TinhTienNhaKhoa
             this.lblTongTien.TabIndex = 11;
             this.lblTongTien.Text = "Tổng Tiền:";
             // 
-            // tongTien
+            // txtTongTien
             // 
-            this.tongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tongTien.Location = new System.Drawing.Point(194, 262);
-            this.tongTien.Margin = new System.Windows.Forms.Padding(2);
-            this.tongTien.Name = "tongTien";
-            this.tongTien.ReadOnly = true;
-            this.tongTien.Size = new System.Drawing.Size(293, 26);
-            this.tongTien.TabIndex = 12;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTongTien.Location = new System.Drawing.Point(194, 262);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(293, 26);
+            this.txtTongTien.TabIndex = 12;
             // 
             // btnTinhTien
             // 
@@ -193,6 +194,7 @@ namespace TinhTienNhaKhoa
             this.btnTinhTien.TabIndex = 13;
             this.btnTinhTien.Text = "Tính Tiền";
             this.btnTinhTien.UseVisualStyleBackColor = true;
+            this.btnTinhTien.Click += new System.EventHandler(this.Tinh_Tien);
             // 
             // nudSoRangNho
             // 
@@ -207,14 +209,25 @@ namespace TinhTienNhaKhoa
             // 
             this.epvNameCheck.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(492, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "VND";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nudSoRangNho);
             this.Controls.Add(this.btnTinhTien);
-            this.Controls.Add(this.tongTien);
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.lblDonGiaNhoRang);
             this.Controls.Add(this.lblNhoRang);
@@ -249,10 +262,11 @@ namespace TinhTienNhaKhoa
         private System.Windows.Forms.Label lblNhoRang;
         private System.Windows.Forms.Label lblDonGiaNhoRang;
         private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.TextBox tongTien;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Button btnTinhTien;
         private System.Windows.Forms.NumericUpDown nudSoRangNho;
         private System.Windows.Forms.ErrorProvider epvNameCheck;
+        private System.Windows.Forms.Label label1;
     }
 }
 
