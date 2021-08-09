@@ -30,6 +30,7 @@ namespace TinhTienNhaKhoa
         {
             Button tinhTien = new Button();
             Console.WriteLine("Test Tính Năng !!!");
+            Console.WriteLine("Test Tính Năng 22222222222 !!!");
         }
     }
 }
