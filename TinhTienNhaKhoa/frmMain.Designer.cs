@@ -54,7 +54,7 @@ namespace TinhTienNhaKhoa
             // 
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblHoTen.Location = new System.Drawing.Point(86, 67);
+            this.lblHoTen.Location = new System.Drawing.Point(86, 66);
             this.lblHoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(72, 20);
@@ -113,6 +113,7 @@ namespace TinhTienNhaKhoa
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(293, 26);
             this.txtHoTen.TabIndex = 5;
+            this.txtHoTen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtHoTen_KeyUp);
             this.txtHoTen.Validating += new System.ComponentModel.CancelEventHandler(this.txtHoTen_Validating);
             // 
             // ckbTienTramRang
@@ -165,9 +166,9 @@ namespace TinhTienNhaKhoa
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTongTien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTongTien.Location = new System.Drawing.Point(86, 267);
+            this.lblTongTien.Location = new System.Drawing.Point(86, 266);
             this.lblTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(93, 20);
@@ -177,13 +178,14 @@ namespace TinhTienNhaKhoa
             // txtTongTien
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTongTien.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTien.ForeColor = System.Drawing.Color.White;
             this.txtTongTien.Location = new System.Drawing.Point(194, 262);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(293, 26);
+            this.txtTongTien.Size = new System.Drawing.Size(240, 26);
             this.txtTongTien.TabIndex = 12;
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnTinhTien
             // 
@@ -195,7 +197,7 @@ namespace TinhTienNhaKhoa
             this.btnTinhTien.TabIndex = 13;
             this.btnTinhTien.Text = "Tính Tiền";
             this.btnTinhTien.UseVisualStyleBackColor = true;
-            this.btnTinhTien.Click += new System.EventHandler(this.Tinh_Tien);
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // nudSoRangNho
             // 
@@ -203,7 +205,7 @@ namespace TinhTienNhaKhoa
             this.nudSoRangNho.Location = new System.Drawing.Point(194, 222);
             this.nudSoRangNho.Margin = new System.Windows.Forms.Padding(2);
             this.nudSoRangNho.Maximum = new decimal(new int[] {
-            50,
+            32,
             0,
             0,
             0});
@@ -213,15 +215,16 @@ namespace TinhTienNhaKhoa
             // 
             // epvNameCheck
             // 
+            this.epvNameCheck.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epvNameCheck.ContainerControl = this;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(492, 264);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(439, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 24);
+            this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "VND";
             // 

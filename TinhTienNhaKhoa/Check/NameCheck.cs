@@ -9,7 +9,7 @@ namespace TinhTienNhaKhoa.Check
 {
     class NameCheck
     {
-        public bool TextBoxBlankCheck(TextBox textBox)
+        public bool BlankCheck(TextBox textBox)
         {
             if (textBox.Text == "")
             {
@@ -19,24 +19,25 @@ namespace TinhTienNhaKhoa.Check
             return true;
         }
 
-        public bool TextBoxHaveNumberCheck(TextBox textBox)
+        public bool NumberCheck(TextBox textBox)
         {
-            string s = textBox.Text.ToString();
-
-            for (int i = 0; i <= s.Length; i++)
+            string str = textBox.Text.ToString();
+            for (int i = 0; i < str.Length; i++)
             {
-                for (char C = 'A'; C <= 'Z'; C++)
+                for (char j = '0'; j < '9'; j++)
                 {
-                    for (char c = 'a'; c <= 'z'; c++)
+                    if (str[i] == j)
                     {
-                        if (s[i] != c || s[i] != C)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
                 }
             }
+            
+            return true;
+        }
 
+        public bool SpecCharCheck(TextBox textBox)
+        {
             return true;
         }
     }

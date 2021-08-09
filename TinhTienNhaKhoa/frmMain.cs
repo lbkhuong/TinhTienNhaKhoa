@@ -29,38 +29,60 @@ namespace TinhTienNhaKhoa
 
             Check.NameCheck nameCheck = new Check.NameCheck();
 
-            if (!nameCheck.TextBoxBlankCheck(txtName))
+            if (!nameCheck.BlankCheck(txtName))
             {
                 epvNameCheck.SetError(txtName, "Tên không được bỏ trống!");
+                btnTinhTien.Enabled = false;
                 return false;
             }
-            /*else
+
+            if (!nameCheck.NumberCheck(txtName))
             {
-                epvNameCheck.Clear();
-                return true;
-            }*/
-            epvNameCheck.SetError(txtName, "");//t sửa này được ko
+                epvNameCheck.SetError(txtName, "Tên không được có số!");
+                btnTinhTien.Enabled = false;
+                return false;
+            }
+
+            btnTinhTien.Enabled = true;
+
+            epvNameCheck.Clear();
+
             return true;
         }
 
-        private void Tinh_Tien(object sender, EventArgs e)
+        private void btnTinhTien_Click(object sender, EventArgs e)
         {
-            
             float tongTien = 0;
             int i = (int)nudSoRangNho.Value;
 
             if (ckbTienTramRang.Checked == true)
             {
-                tongTien = tongTien + 200000;
+                tongTien += 200000;
             }
+
             if (ckbTienCaoVoi.Checked == true)
             {
-                tongTien = tongTien + 300000;
+                tongTien += 300000;
             }
+
+            byte soRang = (byte)nudSoRangNho.Value;
+
             tongTien = tongTien + i * 100000;
-            if (tongTien==0) MessageBox.Show("Bạn chưa nhập bất cứ mục dịch vụ nào !");
+
+            if (tongTien == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập bất kỳ mục dịch vụ nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             txtTongTien.Text = tongTien.ToString();
-            
+        }
+
+        private void txtHoTen_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ckbTienTramRang.Focus();
+            }
         }
     }
 }
