@@ -90,9 +90,9 @@ namespace TinhTienNhaKhoa
             this.lblCaoVoi.Location = new System.Drawing.Point(86, 183);
             this.lblCaoVoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCaoVoi.Name = "lblCaoVoi";
-            this.lblCaoVoi.Size = new System.Drawing.Size(69, 20);
+            this.lblCaoVoi.Size = new System.Drawing.Size(73, 20);
             this.lblCaoVoi.TabIndex = 3;
-            this.lblCaoVoi.Text = "Cạo Vôi:";
+            this.lblCaoVoi.Text = "Cạo Vôi :";
             // 
             // lblTramRang
             // 
@@ -101,9 +101,9 @@ namespace TinhTienNhaKhoa
             this.lblTramRang.Location = new System.Drawing.Point(86, 146);
             this.lblTramRang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTramRang.Name = "lblTramRang";
-            this.lblTramRang.Size = new System.Drawing.Size(92, 20);
+            this.lblTramRang.Size = new System.Drawing.Size(96, 20);
             this.lblTramRang.TabIndex = 4;
-            this.lblTramRang.Text = "Trám Răng:";
+            this.lblTramRang.Text = "Trám Răng :";
             // 
             // txtHoTen
             // 
@@ -146,9 +146,9 @@ namespace TinhTienNhaKhoa
             this.lblNhoRang.Location = new System.Drawing.Point(86, 222);
             this.lblNhoRang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhoRang.Name = "lblNhoRang";
-            this.lblNhoRang.Size = new System.Drawing.Size(85, 20);
+            this.lblNhoRang.Size = new System.Drawing.Size(89, 20);
             this.lblNhoRang.TabIndex = 8;
-            this.lblNhoRang.Text = "Nhổ Răng:";
+            this.lblNhoRang.Text = "Nhổ Răng :";
             // 
             // lblDonGiaNhoRang
             // 
@@ -158,9 +158,9 @@ namespace TinhTienNhaKhoa
             this.lblDonGiaNhoRang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonGiaNhoRang.Name = "lblDonGiaNhoRang";
             this.lblDonGiaNhoRang.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblDonGiaNhoRang.Size = new System.Drawing.Size(190, 18);
+            this.lblDonGiaNhoRang.Size = new System.Drawing.Size(198, 18);
             this.lblDonGiaNhoRang.TabIndex = 9;
-            this.lblDonGiaNhoRang.Text = "(đơn giá 100.000 VND/răng)";
+            this.lblDonGiaNhoRang.Text = "(đơn giá 100.000 VND / răng)";
             // 
             // lblTongTien
             // 
@@ -177,6 +177,7 @@ namespace TinhTienNhaKhoa
             // txtTongTien
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.Red;
             this.txtTongTien.Location = new System.Drawing.Point(194, 262);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongTien.Name = "txtTongTien";
