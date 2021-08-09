@@ -34,12 +34,12 @@ namespace TinhTienNhaKhoa
                 epvNameCheck.SetError(txtName, "Tên không được bỏ trống!");
                 return false;
             }
-            else
+            /*else
             {
                 epvNameCheck.Clear();
                 return true;
-            }
-
+            }*/
+            epvNameCheck.SetError(txtName, "");//t sửa này được ko
             return true;
         }
     }
